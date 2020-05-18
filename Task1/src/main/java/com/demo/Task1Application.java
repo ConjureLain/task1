@@ -50,12 +50,12 @@ public class Task1Application {
 		try {
 			// Reading ContactsList.xlsx Sheet1
 			XSSFWorkbook xssfWorkbook1 = new XSSFWorkbook(
-					new FileInputStream("C:/Users/Lain/Desktop/Marlabs/additional task/ContactsList.xlsx"));
+					new FileInputStream("./src/main/resources/ContactsList.xlsx"));
 			XSSFSheet sheet1 = xssfWorkbook1.getSheetAt(0);
 
 			// Reading Attendee Report.xlsx Sheet1
 			XSSFWorkbook xssfWorkbook2 = new XSSFWorkbook(new FileInputStream(
-					"C:/Users/Lain/Desktop/Marlabs/additional task/Java April 2020- Session 10 - Attendee Report.xlsx"));
+					"./src/main/resources/Java April 2020- Session 10 - Attendee Report.xlsx"));
 			XSSFSheet sheet2 = xssfWorkbook2.getSheetAt(0);
 			
 			//Creating Output Excel
@@ -103,7 +103,7 @@ public class Task1Application {
 				
 			}
 			//writing the file.
-			wb.write(new FileOutputStream("C:/Users/Lain/Desktop/Marlabs/additional task/AbsList.xlsx"));
+			wb.write(new FileOutputStream("./src/main/resources/AbsList.xlsx"));
 
 		} catch (IOException e) {
 			e.printStackTrace();
